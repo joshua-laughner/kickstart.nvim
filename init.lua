@@ -870,6 +870,12 @@ require('lazy').setup({
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
+
+      -- Customize diff colors
+      vim.api.nvim_set_hl(0, 'DiffAdd', { bg = '#1a3a1a', fg = '#50fa7b' })
+      vim.api.nvim_set_hl(0, 'DiffChange', { bg = '#2a2a40', fg = '#f1fa8c' })
+      vim.api.nvim_set_hl(0, 'DiffDelete', { bg = '#3a1a1a', fg = '#ff5555' })
+      vim.api.nvim_set_hl(0, 'DiffText', { bg = '#3a3af0', fg = '#ffb86c', bold = true })
     end,
   },
 
